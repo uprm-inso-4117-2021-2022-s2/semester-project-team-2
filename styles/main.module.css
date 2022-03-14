@@ -1,0 +1,231 @@
+
+.body .pagewrapper{
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  background: rgb(2, 39, 2);
+  padding: 20px 0;
+}
+.nav h4 {
+  color: white;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  line-height: 2;
+  margin-top: 50px;
+  padding: 0 15px;
+  animation: colorchange 2s linear infinite alternate;
+}
+
+/* Slideshow container */
+.slideshowcontainer {
+  max-width: 1000px;
+  position: relative;
+  margin: 50px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sheeps {
+  display: block;
+  width: 100%;
+}
+.mySlides {
+  position: absolute;
+}
+.mySlides img {
+  margin: 0 auto;
+}
+/* Caption text */
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 8px;
+ 
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: rgb(2, 39, 2);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Information boxes */
+.infoImgBox {
+  background: rgb(109, 173, 109);
+  margin: 50px auto;
+
+  display: grid; 
+  grid-template-columns: 1.25fr .75fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+  max-width: 1000px; 
+  
+  box-shadow: 10px 10px 5px 0px rgba(109,173,109,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(109,173,109,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(109,173,109,0.75);
+}
+.infoImgBoxTwo {
+  grid-template-columns: .75fr 1.25fr; 
+
+}
+.infoBox {
+  background: rgb(109, 173, 109);
+  padding: 20px;
+  text-align: justify;
+
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#need {
+  box-shadow: 10px 10px 5px 0px rgba(109,173,109,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(109,173,109,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(109,173,109,0.75);
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.imgBox {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoImgBox img {
+  display: block;
+  width: 300px;
+}
+.support {
+  /* border: 2px solid rgb(109, 173, 109); */
+  color: rgb(109, 173, 109);
+  margin: 0 auto;
+  max-width: 1000px; 
+}
+.support h3 {
+  text-align: center;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.support i {
+  display: block;
+  margin: 50px;
+  font-size: 10rem;
+  animation: icons 10s linear infinite;
+}
+
+.cImgCointainer {
+  border-radius: 100%;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+#cImg {
+  height: 500px;
+  object-fit: contain;
+}
+
+.footer {
+  height: 200px;
+  background: rgb(2, 39, 2);
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer i {
+  color: white;
+  font-size: 8rem;
+}
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 700px){
+  .mySlides img{
+    width: 20rem
+  }
+  
+ .infoImgBox {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "."
+    "."; 
+  }
+}
+@media only screen and (max-width: 500px) {
+ 
+ .mySlides img {
+   width: 15rem;
+ }
+
+ .cImgContainer {
+   height: 300px;
+   width: 300px;
+ }
+
+
+ 
+}
+@keyframes icons {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colorchange {
+  0% {
+    color:rgb(2, 39, 2)
+  }
+  100% {
+    color:rgb(109, 173, 109)
+  }
+  
+}
