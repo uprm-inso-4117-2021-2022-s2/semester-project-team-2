@@ -96,10 +96,8 @@ export default function InformativeWeb() {
                     <img src="/landingpage/images/calendar.jpg" alt="calendar"/>
                 </div>
             </div>
-        
-            <div className={styles.cImgContainer}>
-                <img src="images/animals.jpg" id="c-img" alt=""/>
-            </div>
+
+            <img src="landingpage/images/animals.jpg" class={styles.cImg} alt=""/>
 
             <div className={`${styles["infoImgBox"]} ${styles["infoImgBoxTwo"]}`}>
                 <div className={styles.imgBox}>

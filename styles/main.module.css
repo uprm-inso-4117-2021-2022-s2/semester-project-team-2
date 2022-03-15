@@ -149,17 +149,16 @@
   animation: icons 10s linear infinite;
 }
 
-.cImgCointainer {
+.cImg {
+  display: block;
   border-radius: 100%;
   height: 400px;
   width: 400px;
   overflow: hidden;
   margin: 20px auto;
+  object-fit: cover;
 }
-#cImg {
-  height: 500px;
-  object-fit: contain;
-}
+
 
 .footer {
   height: 200px;
