@@ -97,7 +97,7 @@ export default function InformativeWeb() {
                 </div>
             </div>
 
-            <img src="landingpage/images/animals.jpg" class={styles.cImg} alt=""/>
+            <img src="landingpage/images/animals.jpg" className={styles.cImg} alt=""/>
 
             <div className={`${styles["infoImgBox"]} ${styles["infoImgBoxTwo"]}`}>
                 <div className={styles.imgBox}>
