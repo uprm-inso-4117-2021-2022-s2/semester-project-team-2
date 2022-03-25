@@ -6,7 +6,7 @@ export default function InformativeWeb() {
     return (
         <div className={styles.pagewrapper}>
             <div className={styles.nav}>
-                <h4>INSO-4115 TEAM PROJECT</h4>
+                <h4>TEAM PROJECT</h4>
             </div>
 
             <h1 className={styles.title}>Livestock Management <br/>System</h1>
