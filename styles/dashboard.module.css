@@ -2,7 +2,6 @@
 .pagewrapper {
     margin: 0;
     padding: 0;
-    border: 2px solid red;
     display: block;
     position: relative;
 
@@ -10,18 +9,7 @@
 
     
 }
-.decor {
-    background: #7CC047;
-    width: 2400px;
-    height: 350px;
 
-    border-radius: 100%;
-    margin: 0 auto;
-    position: relative;
-
-    bottom: -100px;
-    
-}
 
 .header {
     background: #4C782A;
@@ -96,13 +84,13 @@
     color: white;
     width: 25rem;
     padding: 20px;
-
+    position: relative;
+    z-index: 2;
     
 }
 
 
 .dtcon {
-    /* border: 2px solid white; */
     display: grid; 
     grid-template-columns: .25fr 1fr; 
     grid-template-rows: 1fr; 
@@ -110,6 +98,8 @@
     grid-template-areas: 
         ". ."; 
     margin-bottom: 5px;
+
+    
 }
 
 
@@ -127,21 +117,21 @@
 
 /* STATS STYLING */
 .stats {
-    border: 3px solid blue;
     width: 25rem;
     height: 25rem;
 }
 /* CHART STYLING */
 .popu {
-    border: 2px solid red;
     margin: 0;
     text-align: center;
     font-size: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* Responsive control */
 .boxone {
-    border: 2px solid black;
+    /* border: 2px solid red; */
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -149,7 +139,7 @@
 }
 
 .boxtwo {
-    border: 2px solid red;
+    /* border: 2px solid blue; */
 
     display: grid;
     place-items: center; 
@@ -164,6 +154,24 @@
 
     
 }
+.decont {
+   height: 100px;
+    width: 100vw;
+    display: none;
+
+    overflow: hidden;
+    
+}
+
+.decor {
+    background: #7CC047;
+    height: 200px;
+    width: 2000px;
+    border-radius: 100%;
+    position: relative;
+    left: -20vw;
+}
+
 
 
 
@@ -179,7 +187,15 @@
     .boxtwo {
         background: #7CC047;
         width: 100%;
+        overflow: hidden;
     }
+    .decont {
+        display: block;
+        margin: 0 auto;
+        
+    }
+    
+    
     
 }
 @media only screen and (max-width: 930px){
@@ -191,6 +207,22 @@
             "."
             "."; 
         
+    }
+    .taskcon {
+        width: 100vw;
+    }
+    .stats {
+        background: #EEEEEE;
+        width: 100vw;
+    }
+
+    .navcont {
+        height: 35rem;
+        width: 35rem;
+        margin: 150px 0;
+    }
+    .decor {
+        left: -70vw;
     }
 }
 @media only screen and (max-width: 650px){

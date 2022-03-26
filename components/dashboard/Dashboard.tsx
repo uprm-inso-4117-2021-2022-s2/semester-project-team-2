@@ -33,16 +33,24 @@ export default function Dashboard(){
 
             <div className={styles.boxone}>
                 <Navigation />
+
+                <div className={styles.decont}>
+                    <div className={styles.decor}></div>
+                </div>
+
                 <div className={styles.boxtwo}>
                     <DailyTasks tasks={tasks} styles={styles} />
+
                     <div className={styles.stats}>
+
                         <p className={styles.popu}>Population</p>
                         <Chart data={data} />
+
                     </div>
                 </div>
             </div>
 
-            {/* <div className={styles.decor}></div> */}
+           
 
 
         </div>
