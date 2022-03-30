@@ -3,6 +3,7 @@ import Script from 'next/script'
 import styles from '../styles/main.module.css'
 
 export default function InformativeWeb() {
+
     return (
         <div className={styles.pagewrapper}>
             <div className={styles.nav}>
@@ -133,7 +134,7 @@ export default function InformativeWeb() {
                 </a>
                 
             </footer>
-            <Script src="landingpage/script.js" />
+            <Script src="/landingpage/script.js" />
     
         </div>
 

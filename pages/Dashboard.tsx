@@ -1,10 +1,10 @@
 
-import styles from '../../styles/dashboard.module.css'
+import styles from '../styles/dashboard.module.css'
 
-import Header from './Header'
-import Navigation from './Navigation'
-import DailyTasks from './DailyTasks'
-import Chart from './Chart'
+import Header from '../components/dashboard/Header'
+import Navigation from '../components/dashboard/Navigation'
+import DailyTasks from '../components/dashboard/DailyTasks'
+import Chart from '../components/dashboard/Chart'
 
 
 export default function Dashboard(){
@@ -26,13 +26,20 @@ export default function Dashboard(){
         { name: 'Group D', value: 2},
     ];
     
+    // Inventory data (progress bars %)
+    const bars = {
+        "one": 10,
+        "two": 20,
+        "three": 30,
+        "four": 70,
+    }
 
     return(
         <div className={styles.pagewrapper}>
             <Header/>
 
             <div className={styles.boxone}>
-                <Navigation />
+                <Navigation bars={bars}/>
 
                 <div className={styles.decont}>
                     <div className={styles.decor}></div>
@@ -48,6 +55,11 @@ export default function Dashboard(){
 
                     </div>
                 </div>
+
+                <div className={styles.decontTwo}>
+                    <div className={styles.decorTwo}></div>
+                </div>
+
             </div>
 
            
