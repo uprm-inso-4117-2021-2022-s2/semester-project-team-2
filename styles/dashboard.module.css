@@ -75,6 +75,12 @@
     width: 100%;
     margin: 5px 0;
     background-color: #ddd;
+    position: relative;
+    display: inline-block;
+}
+
+.myProgress:hover .barLabel {
+    visibility: visible;
 }
 
 .myBar {
@@ -84,6 +90,21 @@
     text-align: center;
     line-height: 30px;
     color: white;
+    position: relative;
+}
+.barLabel {
+    display:inline-block;
+    white-space:nowrap;
+
+    visibility: hidden;
+    background: rgb(143, 64, 64);
+    position: absolute;
+    font-size: .7rem;
+    top: -100%;
+    right: 0;
+    padding: 2px;
+    border-radius: 2px;
+    
 }
 
 .statbox{

@@ -28,10 +28,10 @@ export default function Dashboard(){
     
     // Inventory data (progress bars %)
     const bars = {
-        "one": 10,
-        "two": 20,
-        "three": 30,
-        "four": 70,
+        "one": [10, "cow food"],
+        "two": [50, "pig food"],
+        "three": [20, "chiken food"],
+        "four": [70, "horse hay"],
     }
 
     return(

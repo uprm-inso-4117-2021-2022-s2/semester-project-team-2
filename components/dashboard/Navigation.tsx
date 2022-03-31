@@ -12,17 +12,29 @@ export default function Navigation({ bars }){
             </div>
             <div className={`${styles["invenbox"]} ${styles["navbox"]}`}>
                 <div className={styles.myProgress}>
-                    <div className={styles.myBar}  style={{width: bars.one + "%"}}>{bars.one}%</div>
+                    <div className={styles.myBar}  style={{width: bars.one[0] + "%"}}>
+                        <span className={styles.barLabel}>{bars.one[1]}</span>
+                        {bars.one[0]}%
+                    </div>
                 </div>
                 <div className={styles.myProgress}>
-                    <div className={styles.myBar}  style={{width: bars.two + "%"}}>{bars.two}%</div>
+                    <div className={styles.myBar}  style={{width: bars.two[0] + "%"}}>
+                        <span className={styles.barLabel}>{bars.two[1]}</span>
+                        {bars.two[0]}%
+                    </div>
                 </div>
                 Inventory
                 <div className={styles.myProgress}>
-                    <div className={styles.myBar}  style={{width: bars.three + "%"}}>{bars.three}%</div>
+                    <div className={styles.myBar}  style={{width: bars.three[0] + "%"}}>
+                        {bars.three[0]}%
+                        <span className={styles.barLabel}>{bars.three[1]}</span>
+                    </div>
                 </div>
                 <div className={styles.myProgress}>
-                    <div className={styles.myBar}  style={{width: bars.four + "%"}}>{bars.four}%</div>
+                    <div className={styles.myBar}  style={{width: bars.four[0] + "%"}}>
+                        {bars.four[0]}%
+                        <span className={styles.barLabel}>{bars.four[1]}</span>
+                    </div>
                 </div>
             </div>
             <div className={`${styles["statbox"]} ${styles["navbox"]}`}>Stats</div>
