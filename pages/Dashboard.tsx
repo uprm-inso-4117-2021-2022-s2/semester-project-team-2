@@ -36,7 +36,7 @@ export default function Dashboard(){
 
     return(
         <div className={styles.pagewrapper}>
-            <Header/>
+            <Header styles={styles}/>
 
             <div className={styles.boxone}>
                 <Navigation bars={bars}/>

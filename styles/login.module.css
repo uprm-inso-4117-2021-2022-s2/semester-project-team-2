@@ -1,0 +1,50 @@
+
+.pagewrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    background: #4C782A;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgCont {
+    position: absolute;
+    width: 100%;
+}
+.imgCont img {
+    width: 80%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+.form {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 8px 26px; 
+    grid-template-areas: 
+        "."
+        "."
+        "."
+        "."
+        "."; 
+    position: relative;
+    z-index: 2;
+    background: lightgreen;
+    width: 25em; 
+    height: 20em;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+

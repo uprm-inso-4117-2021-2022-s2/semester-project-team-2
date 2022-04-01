@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Script from 'next/script'
-import styles from '../styles/main.module.css'
+import styles from '../styles/website.module.css'
 import Head from 'next/head'
 
 
