@@ -10,13 +10,21 @@
     "test": "jest"
   },
   "dependencies": {
+    "devextreme": "21.2.7",
+    "devextreme-react": "21.2.7",
     "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-big-calendar": "^0.40.1",
+    "react-dom": "17.0.2",
+    "react-flexy-table": "^1.8.10",
+    "recharts": "^2.1.9",
+    "scheduler-react": "^2.0.20",
+    "tui-calendar": "^1.15.3"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/react": "17.0.40",
+    "@types/react-big-calendar": "^0.38.0",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
     "typescript": "4.6.2"
