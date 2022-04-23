@@ -1,0 +1,16 @@
+[
+    {
+        "id": 45,
+        "name": "Cameo",
+        "type of animal" : "dog",
+        "breed": "german shepard",
+        "medical conditions": ["condition1", "condition2"],
+        "birth date": "2021-04-26T16:30:00.000Z",
+        "death date": "2021-04-26T16:30:00.000Z",
+        "parents": [23,21], // Id of parent animals if we have a record for them 
+        "food type": "normal",
+        "food quantity": ".5 gallons",
+        "images": [],
+        "notes": ["I love this dog", "Please watch him at night, he likes to sneak out!"]
+    },
+]
