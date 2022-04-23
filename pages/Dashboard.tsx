@@ -6,18 +6,18 @@ import Menu from '../components/dashboard/Menu'
 import Navigation from '../components/dashboard/Navigation'
 import DailyTasks from '../components/dashboard/DailyTasks'
 import Chart from '../components/dashboard/Chart'
-import Link from "next/link";
+import { Task } from '../models/Task'
 
 export default function Dashboard(){
     // El contenido de los daily tasks y su estado
     let tasks = [
-        {title: 'Milk cows', complete: false},
-        {title: 'Add manure to field', complete: false},
-        {title: 'Pick up eggs', complete: false},
-        {title: 'Feed chickens', complete: false},
-        {title: 'Open gates', complete: false},
-        {title: 'Open gates', complete: false},
-        {title: 'Open gates', complete: false},
+        new Task("Milk cows"),
+        new Task("Add manure to field"),
+        new Task("Pick up eggs"),
+        new Task("Feed chickens"),
+        new Task("Open gates"),
+        new Task("Check medication expiration dates"),
+        new Task("Turn off generator")
     ]
 
     // El valor del pie chart es la razon de cantidad respecto a los 
