@@ -40,11 +40,8 @@ export default function Dashboard(){
         <div className={styles.pagewrapper}>
 
 
-            {/* <div className={styles.banner}>
-                <img style={{position:"absolute",alignContent:"center"}}src="/banner1.png"/>
-                </div>
-         */}
-            <Header styles={styles}/>
+
+
             <Menu styles={styles}/>
 
 
@@ -54,7 +51,7 @@ export default function Dashboard(){
 
 
             <div className={styles.boxone}>
-                <Navigation bars={bars}/>
+                {/* <Navigation bars={bars}/>
 
                 <div className={styles.decont}>
                     <div className={styles.decor}></div>
@@ -69,7 +66,7 @@ export default function Dashboard(){
                         <Chart data={data} />
 
                     </div>
-                </div>
+                </div> */}
 
                 {/* <div className={styles.decontTwo}>
                     <div className={styles.decorTwo}></div>
@@ -77,7 +74,8 @@ export default function Dashboard(){
 
             </div>
 
-
+           
+        
 
         </div>
     )

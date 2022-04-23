@@ -8,6 +8,16 @@ import DailyTasks from '../components/dashboard/DailyTasks'
 import Chart from '../components/dashboard/Chart'
 import Link from "next/link";
 
+
+import DataGrid, {
+    Column,
+    Grouping,
+    GroupPanel,
+    Pager,
+    Paging,
+    SearchPanel,
+  } from 'devextreme-react/data-grid';
+
 export default function Dashboard(){
     // El contenido de los daily tasks y su estado
     let tasks = {
@@ -40,21 +50,18 @@ export default function Dashboard(){
         <div className={styles.pagewrapper}>
 
 
-            {/* <div className={styles.banner}>
-                <img style={{position:"absolute",alignContent:"center"}}src="/banner1.png"/>
-                </div>
-         */}
-            <Header styles={styles}/>
             <Menu styles={styles}/>
 
 
-
+            <DataGrid
+        
+             >      </DataGrid>
 
 
 
 
             <div className={styles.boxone}>
-                <Navigation bars={bars}/>
+                {/* <Navigation bars={bars}/>
 
                 <div className={styles.decont}>
                     <div className={styles.decor}></div>
@@ -69,7 +76,7 @@ export default function Dashboard(){
                         <Chart data={data} />
 
                     </div>
-                </div>
+                </div> */}
 
                 {/* <div className={styles.decontTwo}>
                     <div className={styles.decorTwo}></div>
@@ -77,7 +84,8 @@ export default function Dashboard(){
 
             </div>
 
-
+           
+        
 
         </div>
     )

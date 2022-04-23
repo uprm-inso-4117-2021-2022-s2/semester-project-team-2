@@ -70,11 +70,11 @@ export default function Login(){
                         <input type="repassword" placeholder="Re-enter Password" name="psw" />
                     </div>
                     <div>
-                        {/* <Link href="./Dashboard">
+                        <Link href="./Dashboard">
                             <a>
                                 <button type="submit">SignIn</button>
                             </a>
-                        </Link> */}
+                        </Link>
                     </div>
                     <div>
 
