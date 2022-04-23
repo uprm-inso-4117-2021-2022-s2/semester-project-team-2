@@ -10,13 +10,15 @@ import Link from "next/link";
 
 export default function Dashboard(){
     // El contenido de los daily tasks y su estado
-    let tasks = {
-        t1: {content: 'Milk cows', complete: false},
-        t2: {content: 'Add manure to field', complete: false},
-        t3: {content: 'Pick up eggs', complete: false},
-        t4: {content: 'Feed chickens', complete: false},
-        t5: {content: 'Open gates', complete: false}
-    }
+    let tasks = [
+        {title: 'Milk cows', complete: false},
+        {title: 'Add manure to field', complete: false},
+        {title: 'Pick up eggs', complete: false},
+        {title: 'Feed chickens', complete: false},
+        {title: 'Open gates', complete: false},
+        {title: 'Open gates', complete: false},
+        {title: 'Open gates', complete: false},
+    ]
 
     // El valor del pie chart es la razon de cantidad respecto a los 
     // otros valores

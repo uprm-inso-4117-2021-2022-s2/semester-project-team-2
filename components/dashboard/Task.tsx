@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 
 
-
-export default function Task({ styles, tasks}) {
+/**
+ * Renders a single task (checkmark + title)
+ */
+export default function Task({ styles, task }) {
 
     const [complete, setComplete] = useState(false)
 
@@ -11,8 +13,8 @@ export default function Task({ styles, tasks}) {
     }
     return (
         <div className={styles.dtcon}>
-                <div className={styles.dtcircle} onClick={colorChange} style={complete ? {background: 'yellow'} : {background: 'white'}}></div>
-                <p>{tasks.content}</p>
+                <div className={styles.dtcircle} onClick={colorChange} style={complete ? {background: 'lightgreen'} : {background: 'white'}}></div>
+                <p>{task.title}</p>
         </div>
     )
 }
