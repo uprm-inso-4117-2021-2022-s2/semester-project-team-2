@@ -20,6 +20,8 @@
     "react-flexy-table": "^1.8.10",
     "recharts": "^2.1.9",
     "scheduler-react": "^2.0.20",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2",
     "tui-calendar": "^1.15.3"
   },
   "devDependencies": {
