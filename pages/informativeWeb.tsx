@@ -1,10 +1,17 @@
 import Image from 'next/image'
 import Script from 'next/script'
-import styles from '../styles/main.module.css'
+import styles from '../styles/website.module.css'
+import Head from 'next/head'
+
 
 export default function InformativeWeb() {
+
     return (
         <div className={styles.pagewrapper}>
+            <Head>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            </Head>
+
             <div className={styles.nav}>
                 <h4>TEAM PROJECT</h4>
             </div>
@@ -133,7 +140,7 @@ export default function InformativeWeb() {
                 </a>
                 
             </footer>
-            <Script src="landingpage/script.js" />
+            <Script src="/landingpage/script.js" />
     
         </div>
 
