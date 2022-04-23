@@ -5,9 +5,13 @@ type Data = {
   name: string
 }
 
-export default function handler(
+import clientPromise from "../../util/mongodb";
+
+export default async function (
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' });
+  const client = await clientPromise;
+  let connectionStatus = await client.db().command({ ping: 1 });
+  res.status(200).json(connectionStatus);
 }
