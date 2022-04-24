@@ -1,0 +1,117 @@
+@startuml
+[*] --> Logged_out
+Logged_out --> [*]
+Logged_out : In login screen
+Logged_out: User has never logged in
+Logged_out : OR User has logged out
+Logged_out --> Logged_in
+
+Logged_in : User has authenticated
+Logged_in : User has access
+Logged_in : Contains general logged in dashboard
+Logged_in --> Logged_out
+
+Logged_in --> Animal : Go to animals page/interface
+Logged_in --> Inventory : Go to inventory page/interface
+Logged_in --> Calendar : Go to the calendar
+Logged_in --> Stats : Go to the stats page/interface
+
+Animal --> Logged_in : Go back to general dashboard
+Animal --> Inventory : Go to inventory page/interface
+Animal --> Calendar : Go to the calendar
+Animal --> Stats : Go to the stats page/interface
+
+Inventory --> Logged_in : Go back to general dashboard
+Inventory --> Animal : Go to animal page/interface
+Inventory --> Calendar : Go to the calendar
+Inventory --> Stats : Go to the stats page/interface
+
+Calendar --> Logged_in : Go back to general dashboard
+Calendar --> Animal : Go to animal page/interface
+Calendar --> Inventory : Go to inventory page/interface
+Calendar --> Stats : Go to the stats page/interface
+
+Stats --> Logged_in : Go back to general dashboard
+Stats --> Animal : Go to animal page/interface
+Stats --> Inventory : Go to inventory page/interface
+Stats --> Calendar : Go to the calendar
+
+
+
+
+state Animal {
+  [*] --> Dashboard_animal
+
+  Dashboard_animal --> Getting_data_animal
+  Dashboard_animal --> Adding_data_animal
+  Dashboard_animal --> Editing_data_animal
+
+  Dashboard_animal: Display general dashboard to user
+  Dashboard_animal: Contains general list of animals
+
+  Getting_data_animal: Displaying all animal information
+  Adding_data_animal: Adding new animals into the system
+  Editing_data_animal: Editing animal data
+
+  Getting_data_animal --> Dashboard_animal
+  Adding_data_animal --> Dashboard_animal
+  Editing_data_animal --> Dashboard_animal
+
+  Getting_data_animal --> Editing_data_animal
+  Editing_data_animal -->  Getting_data_animal
+}
+
+state Inventory {
+  [*] --> Dashboard_inventory
+
+  Dashboard_inventory --> Getting_data_inventory
+  Dashboard_inventory --> Adding_data_inventory
+  Dashboard_inventory --> Editing_data_inventory
+
+  Dashboard_inventory: Display general dashboard to user
+  Dashboard_inventory: Contains general list everything in the inventory
+
+  Getting_data_inventory: Displaying all inventory information
+  Adding_data_inventory: Adding new item to the inventory
+  Editing_data_inventory: Editing inventory data
+
+  Getting_data_inventory --> Dashboard_inventory
+  Adding_data_inventory --> Dashboard_inventory
+  Editing_data_inventory --> Dashboard_inventory
+
+  Getting_data_inventory --> Editing_data_inventory
+  Editing_data_inventory -->  Getting_data_inventory
+}
+
+state Calendar {
+  [*] --> Dashboard_calendar
+
+  Dashboard_calendar --> Getting_event_calendar
+  Dashboard_calendar --> Adding_event_calendar
+  Dashboard_calendar --> Editing_event_calendar
+
+  Dashboard_calendar: Display calendar to user
+  Dashboard_calendar: Contains all events, including tasks
+
+  Getting_event_calendar: Displays information for one specific event
+  Adding_event_calendar: Adds a new event with specific information
+  Editing_event_calendar: Editing an event in the calendar
+
+  Getting_event_calendar --> Dashboard_calendar
+  Adding_event_calendar --> Dashboard_calendar
+  Editing_event_calendar --> Dashboard_calendar
+
+  Getting_event_calendar --> Editing_event_calendar
+  Editing_event_calendar -->  Getting_event_calendar
+}
+
+state Stats {
+  [*] --> Dashboard_stats
+
+  Dashboard_stats: Display stats to user
+  Dashboard_stats: Contains general stats
+}
+
+
+
+@enduml
