@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 // import Link from "next/link";
 // import Header from '../components/dashboard/Header';
-// import { login, signup } from "../../actions/authentication";
+import { login, signup } from "./utils/authentication"
 
 import {
     Button,
@@ -46,31 +46,31 @@ export default function Login() {
     // }
 
     const onLogin = async (e: any) => {
-        // e.preventDefault();
-        // setErrorLogin("");
-        // const pUserData = {
-        //   email: userData.email,
-        //   password: userData.password,
-        // };
-        // let res = await login(pUserData);
-        // if (res) {
-        //   setErrorLogin("Credentials did not match");
-        // } else {
-        //   window.location.href = "/UserView";
-        // }
+        e.preventDefault();
+        setErrorLogin("");
+        const pUserData = {
+          email: userData.email,
+          password: userData.password,
+        };
+        let res = await login(pUserData);
+        if (res) {
+          setErrorLogin("Credentials did not match");
+        } else {
+          window.location.href = "/Dashboard";
+        }
     };
 
     const onSignUp = async (e: any) => {
-        // e.preventDefault();
-        // setErrorSignUp("");
-        // let res = await signup(userData);
-        // if (res) {
-        //   setErrorSignUp("Email already in use by another account");
-        // } else {
-        //   setSuccess(true);
-        //   setTimeout(() => {}, 3000);
-        //   setOpen(false);
-        // }
+        e.preventDefault();
+        setErrorSignUp("");
+        let res = await signup(userData);
+        if (res) {
+          setErrorSignUp("Email already in use by another account");
+        } else {
+          setSuccess(true);
+          setTimeout(() => {}, 3000);
+          setOpen(false);
+        }
     };
 
 
@@ -93,7 +93,7 @@ export default function Login() {
                         <Form.Input
                             label="First Name"
                             placeholder="First Name"
-                            name="first_name"
+                            name="firstName"
                             required
                             value={userData.firstName}
                             onChange={inputChange}
@@ -101,7 +101,7 @@ export default function Login() {
                         <Form.Input
                             label="Last Name"
                             placeholder="Last Name"
-                            name="last_name"
+                            name="lastName"
                             required
                             value={userData.lastName}
                             onChange={inputChange}
