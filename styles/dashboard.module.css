@@ -10,24 +10,56 @@
     min-height: 100vh;
 
 }
-.piescontainer {
+/* .piescontainer {
     
     margin: auto;
     width: 80%;
     display: block;
     margin-left: 13%;
     margin-right: auto;
-  }
+  } */
+.piescontainer1 {
+    
+
+    margin-left: 10%;
+}
   
-.piescontainer > div {
+/* .piescontainer > div {
     border-radius: 50%;
     background-color: white;
     width: 400px;
     float: left;
     margin-top: 10%;
     margin-right: 30px;
-  }
-
+  } */
+.datagrid{
+    width: 70%;  
+    margin-top: 2%;
+    position: absolute; 
+    display: block;
+    margin-left: 15%;
+    margin-right: auto;
+    box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.calendar{
+    width: 70%;  
+    margin-top: 2%;
+    position: absolute; 
+    display: block;
+    margin-left: 15%;
+    margin-right: auto;
+    box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.graficabarra{
+    /* box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    width: 40%;  
+    margin-top: -40%;
+    /* position: absolute;  */
+    display: block;
+    margin-left: 30%;
+    margin-right: auto;
+    
+}
 .bgimage {
     background-image: url("https://cdn5.vectorstock.com/i/1000x1000/32/54/farm-with-animals-silhouette-background-vector-21993254.jpg");
     background-size: cover;    background-image: url("https://i.pinimg.com/736x/31/0b/64/310b64d8fd4a0696d9bcaaf133010a68.jpg");

@@ -11,6 +11,10 @@
   "dependencies": {
     "devextreme": "21.2.7",
     "devextreme-react": "21.2.7",
+    "exceljs": "^4.3.0",
+    "file-saver": "^2.0.5",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.23",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-big-calendar": "^0.40.1",
@@ -21,6 +25,7 @@
     "tui-calendar": "^1.15.3"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.5",
     "@types/node": "17.0.21",
     "@types/react": "17.0.40",
     "@types/react-big-calendar": "^0.38.0",
