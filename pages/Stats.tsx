@@ -18,12 +18,14 @@ import {
 } from 'devextreme-react/chart';
   
 import CenterTemplate from '../components/CenterTemplate';
+import {InventoryData} from "../back_end/inventorydata.js";
+
 export const data = [
-    { country: 'Firefox', commodity: 'Nuclear', total: 403195 },
-    { country: 'diagram', commodity: 'Nuclear', total: 84634 },
-    { country: 'diagram', commodity: 'Thermal', total: 57471 },
-    { country: 'Firefox', commodity: 'Thermal', total: 419591 },
-    { country: 'Firefox', commodity: 'Wind', total: 21400 },
+    { country: 'Mammals', commodity: 'Caballos', total: InventoryData.filter(value => value.Animal === 'Caballos').length},
+    { country: 'Mammals', commodity: 'Vacas', total: InventoryData.filter(value => value.Animal === 'Vacas').length},
+    { country: 'Birds', commodity: 'Gallinas', total: InventoryData.filter(value => value.Animal === 'Gallinas').length},
+    { country: 'Birds', commodity: 'Gansos', total: InventoryData.filter(value => value.Animal === 'Gansos').length},
+    { country: 'Birds', commodity: 'Pavos', total: InventoryData.filter(value => value.Animal === 'Pavos').length},
     { country: 'Safari', commodity: 'Wind', total: 78598 },
     { country: 'Safari', commodity: 'Solar', total: 8160 },
     { country: 'Chrome', commodity: 'Solar', total: 38098 },
@@ -91,18 +93,18 @@ const countries = Array.from(new Set(data.map((item) => item.country)));
 
 
 export default function Dashboard(){
-    
+  var result =   InventoryData.filter(value => value.Animal === 'Caballos').length;
+  console.log(result);
     function customizeLabel(e:any) {
         return `${e.argumentText}\n${e.valueText}`;
       }
       const pies = countries.map((country) => (
         <PieChart
-          id="pie-chart"
-          style={{width:"30%"}}
+          style={{width:"25em", height:"25em", position:"relative"}}
           key={country}
           dataSource={data.filter((i) => i.country === country)}
           resolveLabelOverlapping="shift"
-          sizeGroup="piesGroup"
+          // sizeGroup="piesGroup"
           innerRadius={0.65}
           centerRender={CenterTemplate}
           type="doughnut"
@@ -126,14 +128,21 @@ export default function Dashboard(){
 
         <div className={styles.pagewrapper}>
 
-        <div className={styles.piescontainer}>
-            {/* {pies[0]}
-            {pies[1]} */}
-        </div>
+
 
         {pies[0]}
         {pies[1]}
 
+        <div style={{right:"2%",position:"absolute", top:"0%", left:"0%",display: "flex", justifyContent: "flex-end"}}>
+        {/* <div style={{top:'-30%',marginRight:"2%",display: "flex",alignItems: "flex-end%",justifyContent: "flex-end"}}> */}
+          {pies[2]} 
+
+        </div>
+
+       
+        <div style={{right:"2%",position:"absolute", top:"50%", left:"0%",display: "flex", justifyContent: "flex-end"}}>
+          {pies[3]}    
+        </div> 
 
 
 
