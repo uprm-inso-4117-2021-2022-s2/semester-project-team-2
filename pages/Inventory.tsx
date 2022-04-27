@@ -82,7 +82,8 @@ export default function Dashboard(){
     return(
 
         <div className={styles.pagewrapper}>
-
+          <Header styles={styles}/>
+          <Menu />
 
                 <DataGrid
                     className={styles.datagrid}
@@ -212,7 +213,7 @@ export default function Dashboard(){
                     </Summary>
                 </DataGrid>
                 
-            <Menu styles={styles}/>
+            
 
 
 

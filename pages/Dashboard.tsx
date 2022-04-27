@@ -8,6 +8,7 @@ import DailyTasks from '../components/dashboard/DailyTasks'
 import Chart from '../components/dashboard/Chart'
 import { Task } from '../models/Task'
 
+
 export default function Dashboard(){
     // El contenido de los daily tasks y su estado
     let tasks = [
@@ -36,6 +37,7 @@ export default function Dashboard(){
         "three": [20, "chiken food"],
         "four": [70, "horse hay"],
     }
+    
 
     return(
 
@@ -47,7 +49,7 @@ export default function Dashboard(){
                 </div>
          */}
             <Header styles={styles}/>
-            <Menu styles={styles}/>
+            <Menu />
 
 
 
@@ -78,7 +80,6 @@ export default function Dashboard(){
                 </div> */}
 
             </div>
-
 
 
         </div>

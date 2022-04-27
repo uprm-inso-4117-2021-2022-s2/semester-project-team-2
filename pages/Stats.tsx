@@ -1,12 +1,12 @@
 
 import styles from '../styles/dashboard.module.css'
 
+
 import Header from '../components/dashboard/Header'
 import Menu from '../components/dashboard/Menu'
 import Navigation from '../components/dashboard/Navigation'
 import DailyTasks from '../components/dashboard/DailyTasks'
 // import Chart from '../components/dashboard/Chart'
-import Link from "next/link";
 import { Chart, Series } from 'devextreme-react/chart';
 import PieChart, {
     Legend,
@@ -127,7 +127,8 @@ export default function Dashboard(){
     return(
 
         <div className={styles.pagewrapper}>
-
+          <Header styles={styles}/>
+          <Menu />
 
 
         {pies[0]}
@@ -147,7 +148,7 @@ export default function Dashboard(){
 
 
 
-            <Menu styles={styles}/>
+        
 
 
 
@@ -201,7 +202,7 @@ export default function Dashboard(){
         <Tooltip enabled={true} />
       </Chart>
 
-           
+
         
 
         </div>
