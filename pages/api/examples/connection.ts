@@ -5,7 +5,7 @@ type Data = {
   name: string
 }
 
-import clientPromise from "../../util/mongodb";
+import clientPromise from "../../../back_end/mongodb";
 
 export default async function (
   req: NextApiRequest,
