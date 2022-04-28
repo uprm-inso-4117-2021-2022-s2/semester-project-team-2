@@ -6,7 +6,6 @@ import Menu from '../components/dashboard/Menu'
 import Navigation from '../components/dashboard/Navigation'
 import DailyTasks from '../components/dashboard/DailyTasks'
 import Chart from '../components/dashboard/Chart'
-import Link from "next/link";
 
 export default function Dashboard(){
     // El contenido de los daily tasks y su estado
@@ -41,8 +40,9 @@ export default function Dashboard(){
 
 
 
+            <Header styles={styles}/>
 
-            <Menu styles={styles}/>
+            <Menu />
 
 
 

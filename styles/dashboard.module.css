@@ -7,7 +7,7 @@
     display: block;
     position: relative;
 
-    min-height: 100vh;
+    min-height: 120vh;
 
 }
 /* .piescontainer {
@@ -90,36 +90,6 @@
     /* width: 80px;
     height: 80px; */
 }
-.circle {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    /* background-color: red; */
-    display: block;
-    position: absolute;
-    overflow: hidden;
-    top: 77%;
-    left: 49%;
-    margin: -15px;
-    z-index: 10;
-      background-color: white; /* Blue background */
-  border: none; /* Remove borders */
-  color: #4C782A; /* White text */
-  padding: 17px 13px; /* Some padding */
-  font-size: 48px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
-}
-.circle:hover {
-    background-color:  #7CC047;
-  }
-
-.one { transform:  translate(0px); }
-.two { transform:  translate(300%,100%); }
-.three { transform: translate(-150%,50%); }
-.four { transform: translate(0px,30%); }
-.five { transform: translate(150%, 50%); }
-.six { transform:  translate(-300%,100%); }
-.seven { transform:  translate(0px); }
 
 .header {
     background: #4C782A;
