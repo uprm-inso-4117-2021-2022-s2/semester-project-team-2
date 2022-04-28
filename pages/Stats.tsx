@@ -1,12 +1,12 @@
 
 import styles from '../styles/dashboard.module.css'
 
+
 import Header from '../components/dashboard/Header'
 import Menu from '../components/dashboard/Menu'
 import Navigation from '../components/dashboard/Navigation'
 import DailyTasks from '../components/dashboard/DailyTasks'
 // import Chart from '../components/dashboard/Chart'
-import Link from "next/link";
 import { Chart, Series } from 'devextreme-react/chart';
 import PieChart, {
     Legend,
@@ -23,6 +23,8 @@ import {InventoryData} from "../back_end/inventorydata.js";
 export const data = [
     { country: 'Mammals', commodity: 'Caballos', total: InventoryData.filter(value => value.Animal === 'Caballos').length},
     { country: 'Mammals', commodity: 'Vacas', total: InventoryData.filter(value => value.Animal === 'Vacas').length},
+    { country: 'Mammals', commodity: 'Obejas', total: InventoryData.filter(value => value.Animal === 'Obejas').length},
+    { country: 'Mammals', commodity: 'Cabras', total: InventoryData.filter(value => value.Animal === 'Cabras').length},
     { country: 'Birds', commodity: 'Gallinas', total: InventoryData.filter(value => value.Animal === 'Gallinas').length},
     { country: 'Birds', commodity: 'Gansos', total: InventoryData.filter(value => value.Animal === 'Gansos').length},
     { country: 'Birds', commodity: 'Pavos', total: InventoryData.filter(value => value.Animal === 'Pavos').length},
@@ -31,69 +33,87 @@ export const data = [
     { country: 'Chrome', commodity: 'Solar', total: 38098 },
     { country: 'Chrome', commodity: 'Tidal, Wave', total: 501 },
   ];  
+  
+  // const gender=["Male","Female"]
+  // InventoryData.map((entry:any)=> {entry.age=Math.floor(Math.random() * 21) })
+
+  // InventoryData.map((entry:any)=> {entry.gender=gender[Math.floor(Math.random() * 2)]})
+
+  // InventoryData.map((entry:any)=> {
+  //   if(entry.Animal=== "Caballos"||entry.Animal=== "Cabras"|| entry.Animal=== "Obejas"||
+  //   entry.Animal=== "Vacas") entry.type="Mammal"
+
+  //   else{ entry.type="Bird"}
+  
+  // })
+
+  console.log(JSON.stringify([InventoryData,false," "]))
+  //const newData = {}
   const maleAgeData = [{
-    state: 'USA',
-    maleyoung: 29.956,
-    malemiddle: 90.354,
-    maleolder: 14.472,
-    femaleyoung: 28.597,
-    femalemiddle: 91.827,
-    femaleolder: 20.362,
+    state: 'Caballos',
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Caballos").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Caballos").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Caballos").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Caballos").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Caballos" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Caballos" ).length,
   }, {
-    state: 'Brazil',
-    maleyoung: 25.607,
-    malemiddle: 55.793,
-    maleolder: 3.727,
-    femaleyoung: 24.67,
-    femalemiddle: 57.598,
-    femaleolder: 5.462,
+    state: 'Vacas',
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Caballos").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Caballos").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Caballos").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Caballos").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Caballos" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Caballos" ).length,
   }, {
-    state: 'Russia',
-    maleyoung: 13.493,
-    malemiddle: 48.983,
-    maleolder: 5.802,
-    femaleyoung: 12.971,
-    femalemiddle: 52.14,
-    femaleolder: 12.61,
+    state: 'Obejas',
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Obejas").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Obejas").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Obejas").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Obejas").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Obejas" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Obejas" ).length,
   }, {
-    state: 'Japan',
-    maleyoung: 9.575,
-    malemiddle: 43.363,
-    maleolder: 9.024,
-    femaleyoung: 9.105,
-    femalemiddle: 42.98,
-    femaleolder: 12.501,
+    state: 'Cabras',
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Cabras").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Cabras").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Cabras").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Cabras").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Cabras" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Cabras" ).length,
   }, {
-    state: 'Mexico',
-    maleyoung: 17.306,
-    malemiddle: 30.223,
-    maleolder: 1.927,
-    femaleyoung: 16.632,
-    femalemiddle: 31.868,
-    femaleolder: 2.391,
+    state: 'Gallinas',
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Gallinas").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Gallinas").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Gallinas").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Gallinas").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Gallinas" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Gallinas" ).length,
   }, {
-    state: 'Germany',
-    maleyoung: 6.679,
-    malemiddle: 28.638,
-    maleolder: 5.133,
-    femaleyoung: 6.333,
-    femalemiddle: 27.693,
-    femaleolder: 8.318,
+    state: 'Pavos',
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Pavos").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Pavos").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Pavos").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Pavos").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Pavos" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Pavos" ).length,
   }, {
-    state: 'United Kindom',
-    maleyoung: 5.816,
-    malemiddle: 19.622,
-    maleolder: 3.864,
-    femaleyoung: 5.519,
-    femalemiddle: 19.228,
-    femaleolder: 5.459,
+    state: 'Gansos',
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Gansos").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Gansos").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Gansos").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Gansos").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Gansos" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Gansos" ).length,
   }];
 const countries = Array.from(new Set(data.map((item) => item.country)));
 
 
 
 export default function Dashboard(){
-  var result =   InventoryData.filter(value => value.Animal === 'Caballos').length;
+
+
+  var result =   InventoryData.filter(value => value.Animal === 'Caballos');
   console.log(result);
     function customizeLabel(e:any) {
         return `${e.argumentText}\n${e.valueText}`;
@@ -127,7 +147,8 @@ export default function Dashboard(){
     return(
 
         <div className={styles.pagewrapper}>
-
+          <Header styles={styles}/>
+          <Menu />
 
 
         {pies[0]}
@@ -147,7 +168,7 @@ export default function Dashboard(){
 
 
 
-            <Menu styles={styles}/>
+        
 
 
 
@@ -160,36 +181,36 @@ export default function Dashboard(){
         <CommonSeriesSettings argumentField="state" type="stackedBar" />
         <Series
           valueField="maleyoung"
-          name="Male: 0-14"
+          name="Male: 0-5"
           stack="male"
         />
         <Series
           valueField="malemiddle"
-          name="Male: 15-64"
+          name="Male: 5-10"
           stack="male"
         />
         <Series
           valueField="maleolder"
-          name="Male: 65 and older"
+          name="Male: 10 and older"
           stack="male"
         />
         <Series
           valueField="femaleyoung"
-          name="Female: 0-14"
+          name="Female: 0-5"
           stack="female"
         />
         <Series
           valueField="femalemiddle"
-          name="Female: 15-64"
+          name="Female: 5-10"
           stack="female"
         />
         <Series
           valueField="femaleolder"
-          name="Female: 65 and older"
+          name="Female: 10 and older"
           stack="female"
         />
         <ValueAxis>
-          <Title text="Populations, millions" />
+          <Title text="Populations" />
         </ValueAxis>
         <Legend position="inside"
           columnCount={2}
@@ -201,7 +222,7 @@ export default function Dashboard(){
         <Tooltip enabled={true} />
       </Chart>
 
-           
+
         
 
         </div>

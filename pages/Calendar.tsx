@@ -6,7 +6,6 @@ import Menu from '../components/dashboard/Menu'
 import Navigation from '../components/dashboard/Navigation'
 import DailyTasks from '../components/dashboard/DailyTasks'
 import Chart from '../components/dashboard/Chart'
-import Link from "next/link";
 import 'devextreme/dist/css/dx.light.css';
 
 import DataGrid, {
@@ -30,7 +29,8 @@ export default function Dashboard(){
         <div className={styles.pagewrapper}>
 
 
-            <Menu styles={styles}/>
+            <Header styles={styles}/>
+            <Menu />
 
 
             <Scheduler
