@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -16,6 +16,7 @@
     "file-saver": "^2.0.5",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.23",
+    "mongodb": "^4.4.1",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-big-calendar": "^0.40.1",
@@ -23,6 +24,8 @@
     "react-flexy-table": "^1.8.10",
     "recharts": "^2.1.9",
     "scheduler-react": "^2.0.20",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2",
     "tui-calendar": "^1.15.3"
   },
   "devDependencies": {
@@ -32,6 +35,7 @@
     "@types/react-big-calendar": "^0.38.0",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
+    "jest": "^27.5.1",
     "typescript": "4.6.2"
   }
 }
