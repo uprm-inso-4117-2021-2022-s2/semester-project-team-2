@@ -68,11 +68,8 @@ export const data = [
   // InventoryData.map((entry:any)=> {entry.Gender=Gender[Math.floor(Math.random() * 2)]})
 
   // InventoryData.map((entry:any)=> {
-  //   if(entry.Animal=== "Caballos"||entry.Animal=== "Cabras"|| entry.Animal=== "Obejas"||
-  //   entry.Animal=== "Vacas") entry.type="Mammal"
-
-  //   else{ entry.type="Bird"}
-  
+  //   entry.name=names[Math.floor(Math.random()*names.length)] + " " + names[Math.floor(Math.random()*names.length)];
+  //   console.log(entry.name)
   // })
 
   // function randomDate(start:any, end:any) {
