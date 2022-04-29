@@ -12,17 +12,44 @@ import 'react-flexy-table/dist/index.css'
 import React from 'react';
 import 'devextreme/dist/css/dx.light.css';
 import ODataStore from 'devextreme/data/odata/store';
-
+import { Workbook } from 'exceljs';
+import { saveAs } from 'file-saver';
+// Our demo infrastructure requires us to use 'file-saver-es'.
+// We recommend that you use the official 'file-saver' package in your applications.
+import { exportDataGrid } from 'devextreme/excel_exporter';
+import { jsPDF } from 'jspdf';
+import 'jspdf-autotable';
+import {
+  Export, Selection
+} from 'devextreme-react/data-grid';
 import DataGrid, {
   Column,
   Grouping,
   GroupPanel,
   Pager,
   Paging,
-  SearchPanel,
+  SearchPanel, FilterPanel,HeaderFilter ,
+  Scrolling, 
+  MasterDetail,
 } from 'devextreme-react/data-grid';
-
+import {
+   Editing,  Lookup,
+} from 'devextreme-react/data-grid';
 import DiscountCell from "../components/DiscountCell";
+import {
+  Popup,
+  Form,
+} from 'devextreme-react/data-grid';
+import 'devextreme-react/text-area';
+import { Item } from 'devextreme-react/form';
+import {
+  ColumnChooser, LoadPanel, Toolbar, 
+} from 'devextreme-react/data-grid';
+import {InventoryData} from "../back_end/inventorydata.js";
+import SelectBox from 'devextreme-react/select-box';
+import {
+  Summary, GroupItem, SortByGroupSummaryInfo,
+} from 'devextreme-react/data-grid';
 
 const pageSizes = [10];
 
@@ -38,77 +65,155 @@ const dataSourceOptions = {
 };
 
 export default function Dashboard(){
-    // El contenido de los daily tasks y su estado
-    let tasks = {
-        t1: {content: 'Milk cows', complete: false},
-        t2: {content: 'Add manure to field', complete: false},
-        t3: {content: 'Pick up eggs', complete: false},
-        t4: {content: 'Feed chickens', complete: false},
-        t5: {content: 'Open gates', complete: false}
-    }
-
-    // El valor del pie chart es la razon de cantidad respecto a los 
-    // otros valores
-    const data = [
-        { name: 'Group A', value: 1 },
-        { name: 'Group B', value: 1 },
-        { name: 'Group C', value: 1 },
-        { name: 'Group D', value: 2},
-    ];
-    
-    // Inventory data (progress bars %)
-    const bars = {
-        "one": [10, "cow food"],
-        "two": [50, "pig food"],
-        "three": [20, "chiken food"],
-        "four": [70, "horse hay"],
-    }
+  // function constructor(props) {
+  //   super(props);
+  //   this.employees = service.getEmployees();
+  //   this.onExporting = this.onExporting.bind(this);
+  // }
+  const [count, setCount] = React.useState("");
+  const groupingValues = [{
+    value: 'CustomerStoreState',
+    text: 'Grouping by State',
+  }, {
+    value: 'Product',
+    text: 'Grouping by Product',
+  }]; 
 
     return(
 
         <div className={styles.pagewrapper}>
+          <Header styles={styles}/>
+          <Menu />
+
+                <DataGrid
+                    className={styles.datagrid}
+                    dataSource={InventoryData}
+                    allowColumnReordering={true}
+                    rowAlternationEnabled={true}
+                    showBorders={true}
+                    height={"70%"}
+                    // filterValue={"Type"}
+                    filterBuilderPopup={{}}
+                    // ref={}
+
+                    // onContentReady={onContentReady}
+                >
+
+                          {/* <LoadPanel enabled={true} /> */}
+            <GroupPanel visible={true} allowColumnDragging={true} />
+            <SearchPanel visible={true} highlightCaseSensitive={true} />
+            <Toolbar>
+                <Item name="addRowButton" />
+                <Item name="applyFilterButton" />
+                <Item name="exportButton" />
+                <Item name="columnChooserButton	" />
+                <Item name="searchPanel" />
+                <Item name="groupPanel" />
+                {/* <Item>  
+                  <SelectBox 
+                        visible={true}
+                        width="225"
+                        items={groupingValues}
+                        displayExpr="text"
+                        valueExpr="value"
+                        // value={state.grouping}
+                        // onValueChanged={groupChanged}
+                    /> 
+                </Item> */}
+            </Toolbar>
 
 
-<DataGrid
-        dataSource={dataSourceOptions}
-        allowColumnReordering={true}
-        rowAlternationEnabled={true}
-        showBorders={true}
-        // onContentReady={onContentReady}
-      >
-        <GroupPanel visible={true} />
-        <SearchPanel visible={true} highlightCaseSensitive={true} />
-        <Grouping autoExpandAll={false} />
+                    
 
-        <Column dataField="Product" groupIndex={0} />
-        <Column
-          dataField="Amount"
-          caption="Sale Amount"
-          dataType="number"
-          format="currency"
-          alignment="right"
-        />
-        <Column
-          dataField="Discount"
-          caption="Discount %"
-          dataType="number"
-          format="percent"
-          alignment="right"
-          allowGrouping={false}
-          cellRender={DiscountCell}
-          cssClass="bullet"
-        />
-        <Column dataField="SaleDate" dataType="date" />
-        <Column dataField="Region" dataType="string" />
-        <Column dataField="Sector" dataType="string" />
-        <Column dataField="Channel" dataType="string" />
-        <Column dataField="Customer" dataType="string" width={150} />
+  
 
-        <Pager allowedPageSizes={pageSizes} showPageSizeSelector={true} />
-        <Paging defaultPageSize={10} />
-      </DataGrid>
 
-            <Menu styles={styles}/>
+                      
+                    
+            <Grouping autoExpandAll={false} />
+
+                    <Editing
+            mode="popup"
+            allowUpdating={true}
+            allowAdding={true}
+            allowDeleting={true}>
+            <Popup title="Animal Info" showTitle={true} width={700} height={525} />
+            <Form>
+              <Item itemType="group" colCount={2} colSpan={2}>
+                <Item dataField="Animal" />
+                <Item dataField="Name" />
+                <Item dataField="Amount" />
+                <Item dataField="Food Quantity" />
+                <Item dataField="Breed" />
+                <Item dataField="Conditions" />
+                <Item dataField="BirthDate" />
+                <Item dataField="DeathDate" />
+                <Item
+                  dataField="Notes"
+                  editorType="dxTextArea"
+                  colSpan={2}
+ />
+              </Item>
+
+              {/* <Item itemType="group" caption="Home Address" colCount={2} colSpan={2}>
+                <Item dataField="StateID" />
+                <Item dataField="Address" />
+              </Item> */}
+
+            </Form>
+
+
+          
+          </Editing>
+
+                    <Scrolling mode="virtual" />
+                    <Selection mode="multiple" />
+                    <Export enabled={true} allowExportSelectedData={true} />
+
+                    <Column dataField="Animal" groupIndex={0} />
+
+
+                    <Column dataField="Name" dataType="string" width={150} />
+                    <Column
+                    dataField="Amount"
+                    caption="Amount"
+                    dataType="number"
+                    format="fixedPoint"
+                    alignment="left"
+                    />
+                    <Column dataField="Gender" dataType="string" />
+                    <Column
+                    dataField="Food Quantity"
+                    caption="Food %"
+                    dataType="number"
+                    format="percent"
+                    alignment="left"
+                    allowGrouping={false}
+                    cellRender={DiscountCell}
+                    cssClass="bullet"
+                    />        
+                    <Column dataField="Breed" dataType="string" />
+                    <Column dataField="Medical Conditions" caption="Conditions" dataType="string" />
+                    <Column dataField="BirthDate" dataType="date" />
+                    <Column dataField="DeathDate" dataType="date" />
+                    <Column dataField="Notes" dataType="string" />
+
+
+                    <Pager allowedPageSizes={pageSizes} showPageSizeSelector={true} />
+                    <Paging defaultPageSize={10} />
+
+                    <Summary>
+                    <GroupItem
+                      column="Amount"
+                      summaryType="count"
+                      valueFormat="fixedPoint"
+                      showInGroupFooter={false}
+                      alignByColumn={true} />
+
+                    </Summary>
+                </DataGrid>
+                
+            
 
 
 

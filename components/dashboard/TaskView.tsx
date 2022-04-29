@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 /**
  * Renders a single task (checkmark + title)
  */
-export default function Task({ styles, task }) {
+export default function TaskView({ styles, task }) {
 
     const [complete, setComplete] = useState(false)
 

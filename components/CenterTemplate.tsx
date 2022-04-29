@@ -12,7 +12,7 @@ function calculateTotal(pieChart:any) {
 }
 
 function getImagePath(country:any) {
-  return `../landingpage/images/${country.replace(/\s/, '').toLowerCase()}.jpg`;
+  return `../${country.replace(/\s/, '').toLowerCase()}.png`;
 }
 
 export default function TooltipTemplate(pieChart:any) {

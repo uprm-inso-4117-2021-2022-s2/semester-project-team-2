@@ -6,8 +6,7 @@ import Menu from '../components/dashboard/Menu'
 import Navigation from '../components/dashboard/Navigation'
 import DailyTasks from '../components/dashboard/DailyTasks'
 import Chart from '../components/dashboard/Chart'
-import Link from "next/link";
-
+import 'devextreme/dist/css/dx.light.css';
 
 import DataGrid, {
     Column,
@@ -18,44 +17,32 @@ import DataGrid, {
     SearchPanel,
   } from 'devextreme-react/data-grid';
 
+import Scheduler from 'devextreme-react/scheduler';
+import { CalendarData } from '../back_end/calendardata'
+  
+const currentDate = new Date();
+
 export default function Dashboard(){
-    // El contenido de los daily tasks y su estado
-    let tasks = {
-        t1: {content: 'Milk cows', complete: false},
-        t2: {content: 'Add manure to field', complete: false},
-        t3: {content: 'Pick up eggs', complete: false},
-        t4: {content: 'Feed chickens', complete: false},
-        t5: {content: 'Open gates', complete: false}
-    }
-
-    // El valor del pie chart es la razon de cantidad respecto a los 
-    // otros valores
-    const data = [
-        { name: 'Group A', value: 1 },
-        { name: 'Group B', value: 1 },
-        { name: 'Group C', value: 1 },
-        { name: 'Group D', value: 2},
-    ];
     
-    // Inventory data (progress bars %)
-    const bars = {
-        "one": [10, "cow food"],
-        "two": [50, "pig food"],
-        "three": [20, "chiken food"],
-        "four": [70, "horse hay"],
-    }
-
     return(
 
         <div className={styles.pagewrapper}>
 
 
-            <Menu styles={styles}/>
+            <Header styles={styles}/>
+            <Menu />
 
 
-            <DataGrid
-        
-             >      </DataGrid>
+            <Scheduler
+            className={styles.calendar}
+            timeZone="America/Los_Angeles"
+            dataSource={CalendarData}
+            views={['day', 'workWeek', 'month', 'agenda']}
+            defaultCurrentView="workWeek"
+            defaultCurrentDate={currentDate}
+            height={"70%"}
+            startDayHour={9}
+            />
 
 
 
