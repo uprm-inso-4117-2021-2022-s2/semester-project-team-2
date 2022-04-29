@@ -8,7 +8,7 @@
 export const InventoryData =
     [
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Manufacturing",
         "Notes": "Resellers",
         "Units": 3,
@@ -24,7 +24,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Telecom",
         "Notes": "Consultants",
         "Units": 2,
@@ -40,7 +40,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 4,
@@ -56,7 +56,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Telecom",
         "Notes": "Retail",
         "Units": 1,
@@ -72,7 +72,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 2,
@@ -88,7 +88,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 2,
@@ -104,7 +104,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Health",
         "Notes": "Direct",
         "Units": 3,
@@ -120,7 +120,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 3,
@@ -136,7 +136,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 4,
@@ -152,7 +152,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Telecom",
         "Notes": "Resellers",
         "Units": 4,
@@ -168,7 +168,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 2,
@@ -184,7 +184,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Manufacturing",
         "Notes": "Direct",
         "Units": 1,
@@ -200,7 +200,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Health",
         "Notes": "Consultants",
         "Units": 4,
@@ -216,7 +216,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "Direct",
         "Units": 4,
@@ -232,7 +232,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Banking",
         "Notes": "Consultants",
         "Units": 2,
@@ -248,7 +248,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Banking",
         "Notes": "Consultants",
         "Units": 3,
@@ -264,7 +264,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Manufacturing",
         "Notes": "Resellers",
         "Units": 3,
@@ -280,7 +280,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Telecom",
         "Notes": "Consultants",
         "Units": 2,
@@ -296,7 +296,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 4,
@@ -312,7 +312,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Telecom",
         "Notes": "Retail",
         "Units": 1,
@@ -328,7 +328,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 2,
@@ -344,7 +344,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 2,
@@ -360,7 +360,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Health",
         "Notes": "Direct",
         "Units": 3,
@@ -376,7 +376,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 3,
@@ -392,7 +392,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 4,
@@ -408,7 +408,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Manufacturing",
         "Notes": "Resellers",
         "Units": 3,
@@ -424,7 +424,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Telecom",
         "Notes": "Consultants",
         "Units": 2,
@@ -440,7 +440,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 4,
@@ -456,7 +456,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Telecom",
         "Notes": "Retail",
         "Units": 1,
@@ -472,7 +472,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 2,
@@ -488,7 +488,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 2,
@@ -504,7 +504,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Health",
         "Notes": "Direct",
         "Units": 3,
@@ -520,7 +520,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 3,
@@ -536,7 +536,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 4,
@@ -552,7 +552,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Telecom",
         "Notes": "Resellers",
         "Units": 4,
@@ -568,7 +568,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 2,
@@ -584,7 +584,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Manufacturing",
         "Notes": "Direct",
         "Units": 1,
@@ -600,7 +600,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Health",
         "Notes": "Consultants",
         "Units": 4,
@@ -616,7 +616,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "Direct",
         "Units": 4,
@@ -632,7 +632,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Banking",
         "Notes": "Consultants",
         "Units": 2,
@@ -648,7 +648,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Banking",
         "Notes": "Consultants",
         "Units": 3,
@@ -664,7 +664,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Manufacturing",
         "Notes": "Resellers",
         "Units": 3,
@@ -680,7 +680,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Telecom",
         "Notes": "Consultants",
         "Units": 2,
@@ -696,7 +696,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 4,
@@ -712,7 +712,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Telecom",
         "Notes": "Retail",
         "Units": 1,
@@ -728,7 +728,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 2,
@@ -744,7 +744,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 2,
@@ -760,7 +760,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Health",
         "Notes": "Direct",
         "Units": 3,
@@ -776,7 +776,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 3,
@@ -792,7 +792,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 4,
@@ -808,7 +808,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Telecom",
         "Notes": "Resellers",
         "Units": 4,
@@ -824,7 +824,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 2,
@@ -840,7 +840,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Manufacturing",
         "Notes": "Direct",
         "Units": 1,
@@ -856,7 +856,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Health",
         "Notes": "Consultants",
         "Units": 4,
@@ -872,7 +872,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "Direct",
         "Units": 4,
@@ -888,7 +888,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Banking",
         "Notes": "Consultants",
         "Units": 2,
@@ -904,7 +904,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Banking",
         "Notes": "Consultants",
         "Units": 3,
@@ -920,7 +920,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Banking",
         "Notes": "Resellers",
         "Units": 3,
@@ -936,7 +936,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 1,
@@ -952,7 +952,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 3,
@@ -968,7 +968,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Insurance",
         "Notes": "Consultants",
         "Units": 1,
@@ -984,7 +984,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 1,
@@ -1000,7 +1000,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Banking",
         "Notes": "Consultants",
         "Units": 1,
@@ -1016,7 +1016,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Telecom",
         "Notes": "Resellers",
         "Units": 1,
@@ -1032,7 +1032,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Australia",
+        "Medical Conditions": "Arthritis",
         "Breed": "Health",
         "Notes": "Consultants",
         "Units": 2,
@@ -1048,7 +1048,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Insurance",
         "Notes": "Retail",
         "Units": 2,
@@ -1064,7 +1064,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Telecom",
         "Notes": "VARs",
         "Units": 4,
@@ -1080,7 +1080,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 4,
@@ -1096,7 +1096,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Insurance",
         "Notes": "Direct",
         "Units": 1,
@@ -1112,7 +1112,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "South America",
+        "Medical Conditions": "Urinary Problems",
         "Breed": "Health",
         "Notes": "Direct",
         "Units": 3,
@@ -1128,7 +1128,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Insurance",
         "Notes": "Resellers",
         "Units": 1,
@@ -1144,7 +1144,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 1,
@@ -1160,7 +1160,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Banking",
         "Notes": "Resellers",
         "Units": 3,
@@ -1176,7 +1176,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Health",
         "Notes": "VARs",
         "Units": 2,
@@ -1192,7 +1192,7 @@ export const InventoryData =
         "type": "Bird"
       },
       {
-        "Medical Conditions": "Asia",
+        "Medical Conditions": "Obesity",
         "Breed": "Telecom",
         "Notes": "Direct",
         "Units": 3,
@@ -1208,7 +1208,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "Europe",
+        "Medical Conditions": "Diabetes",
         "Breed": "Health",
         "Notes": "Consultants",
         "Units": 3,
@@ -1224,7 +1224,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Banking",
         "Notes": "Resellers",
         "Units": 3,
@@ -1240,7 +1240,7 @@ export const InventoryData =
         "type": "Mammal"
       },
       {
-        "Medical Conditions": "North America",
+        "Medical Conditions": "None",
         "Breed": "Banking",
         "Notes": "VARs",
         "Units": 1,

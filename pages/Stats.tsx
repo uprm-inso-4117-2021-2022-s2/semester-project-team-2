@@ -28,10 +28,17 @@ export const data = [
     { country: 'Birds', commodity: 'Gallinas', total: InventoryData.filter(value => value.Animal === 'Gallinas').length},
     { country: 'Birds', commodity: 'Gansos', total: InventoryData.filter(value => value.Animal === 'Gansos').length},
     { country: 'Birds', commodity: 'Pavos', total: InventoryData.filter(value => value.Animal === 'Pavos').length},
-    { country: 'Safari', commodity: 'Wind', total: 78598 },
-    { country: 'Safari', commodity: 'Solar', total: 8160 },
-    { country: 'Chrome', commodity: 'Solar', total: 38098 },
-    { country: 'Chrome', commodity: 'Tidal, Wave', total: 501 },
+    { country: 'Medical_Conditions', commodity: 'Obesity', total: InventoryData.filter(value => value['Medical Conditions'] === 'Obesity').length},
+    { country: 'Medical_Conditions', commodity: 'Arthritis', total: InventoryData.filter(value => value['Medical Conditions'] === 'Arthritis').length},
+    { country: 'Medical_Conditions', commodity: 'None', total: InventoryData.filter(value => value['Medical Conditions'] === 'None').length},
+    { country: 'Medical_Conditions', commodity: 'Diabetes', total: InventoryData.filter(value => value['Medical Conditions'] === 'Diabetes').length},
+    { country: 'Medical_Conditions', commodity: 'Urinary Problems', total: InventoryData.filter(value => value['Medical Conditions'] === 'Urinary Problems').length},
+    { country: 'Amounts', commodity: '1-100', total: InventoryData.filter(value => value.Amount >= 0 && value.Amount <= 100).length},
+    { country: 'Amounts', commodity: '100-500', total: InventoryData.filter(value => value.Amount >= 100 && value.Amount <= 500).length},
+    { country: 'Amounts', commodity: '500-1000', total: InventoryData.filter(value => value.Amount >= 500 && value.Amount <= 1000).length},
+    { country: 'Amounts', commodity: '1000-2500', total: InventoryData.filter(value => value.Amount >= 1000 && value.Amount <= 2500).length},
+    { country: 'Amounts', commodity: '2500-5000', total: InventoryData.filter(value => value.Amount >= 2500 && value.Amount <= 5000).length},
+    { country: 'Amounts', commodity: '5000+', total: InventoryData.filter(value => value.Amount >= 5000).length},
   ];  
   
   // const gender=["Male","Female"]
