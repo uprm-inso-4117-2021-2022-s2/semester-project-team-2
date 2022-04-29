@@ -29,8 +29,7 @@ export default function Dashboard(){
         <div className={styles.pagewrapper}>
 
 
-            <Header styles={styles}/>
-            <Menu />
+            <Menu styles={styles}/>
 
 
             <Scheduler

@@ -41,10 +41,31 @@ export const data = [
     { country: 'Amounts', commodity: '5000+', total: InventoryData.filter(value => value.Amount >= 5000).length},
   ];  
   
-  // const gender=["Male","Female"]
-  // InventoryData.map((entry:any)=> {entry.age=Math.floor(Math.random() * 21) })
+  // const Gender=[randomDate(new Date(2012, 0, 1),new Date()),"","","","","","","","",""]
+  
+  // InventoryData.map((entry:any)=> {
 
-  // InventoryData.map((entry:any)=> {entry.gender=gender[Math.floor(Math.random() * 2)]})
+    // let d=new Date(entry.birthDate)
+    // d.setDate(d.getDate() + 1400)
+    // const Gender=[randomDate(entry.BirthDate,new Date()),"","","","","","","","",""]
+    // entry.DeathDate=Gender[Math.floor(Math.random() * 10)]})
+
+  // InventoryData.map((entry:any)=> {entry.age=Math.floor(Math.random() * 21) })
+//   function GetSortOrder(prop:any) {    
+//     return function(a:any, b:any) {    
+//         if (a[prop] > b[prop]) {    
+//             return 1;    
+//         } else if (a[prop] < b[prop]) {    
+//             return -1;    
+//         }    
+//         return 0;    
+//     }    
+// }  
+//   let Id=1
+//   InventoryData.sort(GetSortOrder("BirthDate"))
+//   InventoryData.map((entry:any)=> {entry.ID=Id;Id++ })
+  // console.log(JSON.stringify(InventoryData))
+  // InventoryData.map((entry:any)=> {entry.Gender=Gender[Math.floor(Math.random() * 2)]})
 
   // InventoryData.map((entry:any)=> {
   //   if(entry.Animal=== "Caballos"||entry.Animal=== "Cabras"|| entry.Animal=== "Obejas"||
@@ -54,64 +75,81 @@ export const data = [
   
   // })
 
-  console.log(JSON.stringify([InventoryData,false," "]))
+  // function randomDate(start:any, end:any) {
+  //   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  // }
+
+  // InventoryData.map((entry:any)=> {
+  //   let d=randomDate(new Date(2012, 0, 1),new Date());
+  //   entry.BirthDate=d;
+  //   const Gender=[randomDate(d,new Date()),"","","","","","",""];
+
+  //   entry.DeathDate=Gender[Math.floor(Math.random() * 8)] }
+  //   )
+  // let Id=1
+  // InventoryData.sort(GetSortOrder("BirthDate"))
+  // InventoryData.map((entry:any)=> {entry.ID=Id;Id++ })
+
+  // // InventoryData.map((entry:any)=> {entry.DeathDate="";})
+  // console.log(JSON.stringify(InventoryData))
+  
   //const newData = {}
   const maleAgeData = [{
     state: 'Caballos',
-    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Caballos").length ,
-    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Caballos").length,
-    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Caballos").length,
-    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Caballos").length ,
-    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Caballos" ).length,
-    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Caballos" ).length,
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Male" && value.Animal==="Caballos").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Male" && value.Animal==="Caballos").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Male" && value.Animal==="Caballos").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Female"&& value.Animal==="Caballos").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Female"&& value.Animal==="Caballos" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Female"&& value.Animal==="Caballos" ).length,
   }, {
     state: 'Vacas',
-    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Caballos").length ,
-    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Caballos").length,
-    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Caballos").length,
-    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Caballos").length ,
-    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Caballos" ).length,
-    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Caballos" ).length,
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Male" && value.Animal==="Caballos").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Male" && value.Animal==="Caballos").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Male" && value.Animal==="Caballos").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Female"&& value.Animal==="Caballos").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Female"&& value.Animal==="Caballos" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Female"&& value.Animal==="Caballos" ).length,
   }, {
     state: 'Obejas',
-    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Obejas").length ,
-    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Obejas").length,
-    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Obejas").length,
-    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Obejas").length ,
-    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Obejas" ).length,
-    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Obejas" ).length,
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Male" && value.Animal==="Obejas").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Male" && value.Animal==="Obejas").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Male" && value.Animal==="Obejas").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Female"&& value.Animal==="Obejas").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Female"&& value.Animal==="Obejas" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Female"&& value.Animal==="Obejas" ).length,
   }, {
     state: 'Cabras',
-    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Cabras").length ,
-    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Cabras").length,
-    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Cabras").length,
-    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Cabras").length ,
-    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Cabras" ).length,
-    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Cabras" ).length,
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Male" && value.Animal==="Cabras").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Male" && value.Animal==="Cabras").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Male" && value.Animal==="Cabras").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Female"&& value.Animal==="Cabras").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Female"&& value.Animal==="Cabras" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Female"&& value.Animal==="Cabras" ).length,
   }, {
     state: 'Gallinas',
-    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Gallinas").length ,
-    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Gallinas").length,
-    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Gallinas").length,
-    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Gallinas").length ,
-    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Gallinas" ).length,
-    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Gallinas" ).length,
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Male" && value.Animal==="Gallinas").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Male" && value.Animal==="Gallinas").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Male" && value.Animal==="Gallinas").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Female"&& value.Animal==="Gallinas").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Female"&& value.Animal==="Gallinas" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Female"&& value.Animal==="Gallinas" ).length,
   }, {
     state: 'Pavos',
-    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Pavos").length ,
-    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Pavos").length,
-    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Pavos").length,
-    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Pavos").length ,
-    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Pavos" ).length,
-    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Pavos" ).length,
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Male" && value.Animal==="Pavos").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Male" && value.Animal==="Pavos").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Male" && value.Animal==="Pavos").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Female"&& value.Animal==="Pavos").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Female"&& value.Animal==="Pavos" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Female"&& value.Animal==="Pavos" ).length,
   }, {
     state: 'Gansos',
-    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Male" && value.Animal==="Gansos").length ,
-    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Male" && value.Animal==="Gansos").length,
-    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Male" && value.Animal==="Gansos").length,
-    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.gender==="Female"&& value.Animal==="Gansos").length ,
-    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.gender==="Female"&& value.Animal==="Gansos" ).length,
-    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.gender==="Female"&& value.Animal==="Gansos" ).length,
+    maleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Male" && value.Animal==="Gansos").length ,
+    malemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Male" && value.Animal==="Gansos").length,
+    maleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Male" && value.Animal==="Gansos").length,
+    femaleyoung: InventoryData.filter((value:any)=> value.age < 5  && value.Gender==="Female"&& value.Animal==="Gansos").length ,
+    femalemiddle: InventoryData.filter((value:any)=> value.age < 10 && value.age >=5  && value.Gender==="Female"&& value.Animal==="Gansos" ).length,
+    femaleolder: InventoryData.filter((value:any)=> value.age >=10  && value.Gender==="Female"&& value.Animal==="Gansos" ).length,
   }];
 const countries = Array.from(new Set(data.map((item) => item.country)));
 
@@ -154,8 +192,7 @@ export default function Dashboard(){
     return(
 
         <div className={styles.pagewrapper}>
-          <Header styles={styles}/>
-          <Menu />
+          <Menu styles={styles}/>
 
 
         {pies[0]}

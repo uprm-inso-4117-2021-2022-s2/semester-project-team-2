@@ -82,8 +82,7 @@ export default function Dashboard(){
     return(
 
         <div className={styles.pagewrapper}>
-          <Header styles={styles}/>
-          <Menu />
+          <Menu styles={styles}/>
 
                 <DataGrid
                     className={styles.datagrid}
@@ -142,9 +141,8 @@ export default function Dashboard(){
               <Item itemType="group" colCount={2} colSpan={2}>
                 <Item dataField="Animal" />
                 <Item dataField="Name" />
-                <Item dataField="Amount" />
+                <Item dataField="ID" />
                 <Item dataField="Food Quantity" />
-                <Item dataField="Breed" />
                 <Item dataField="Conditions" />
                 <Item dataField="BirthDate" />
                 <Item dataField="DeathDate" />
@@ -175,8 +173,8 @@ export default function Dashboard(){
 
                     <Column dataField="Name" dataType="string" width={150} />
                     <Column
-                    dataField="Amount"
-                    caption="Amount"
+                    dataField="ID"
+                    caption="ID"
                     dataType="number"
                     format="fixedPoint"
                     alignment="left"
@@ -192,7 +190,7 @@ export default function Dashboard(){
                     cellRender={DiscountCell}
                     cssClass="bullet"
                     />        
-                    <Column dataField="Breed" dataType="string" />
+                    {/* <Column dataField="Type" dataType="string" /> */}
                     <Column dataField="Medical Conditions" caption="Conditions" dataType="string" />
                     <Column dataField="BirthDate" dataType="date" />
                     <Column dataField="DeathDate" dataType="date" />
@@ -204,7 +202,7 @@ export default function Dashboard(){
 
                     <Summary>
                     <GroupItem
-                      column="Amount"
+                      column="ID"
                       summaryType="count"
                       valueFormat="fixedPoint"
                       showInGroupFooter={false}

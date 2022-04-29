@@ -62,9 +62,8 @@ export default function Dashboard(){
 
 
 
-            <Header styles={styles}/>
 
-            <Menu />
+            <Menu styles={styles}/>
 
 
 ​
@@ -113,22 +112,14 @@ export default function Dashboard(){
             allowUpdating={true}
             allowAdding={true}
             allowDeleting={true}>
-            <Popup title="Animal Info" showTitle={true} width={700} height={525} />
+            <Popup title="Task Info" showTitle={true} width={700} height={525} />
             <Form>
               <Item itemType="group" colCount={2} colSpan={2}>
-                <Item dataField="Animal" />
-                <Item dataField="Name" />
-                <Item dataField="Amount" />
-                <Item dataField="Food Quantity" />
-                <Item dataField="Breed" />
-                <Item dataField="Conditions" />
-                <Item dataField="BirthDate" />
-                <Item dataField="DeathDate" />
-                <Item
-                  dataField="Notes"
-                  editorType="dxTextArea"
-                  colSpan={2}
- />
+                <Item dataField="Task_Start_Date" caption="Start Date" />
+                <Item dataField="Task_Assigned_Employee" caption="Assigned To:"/>
+                <Item dataField="Task_Subject" caption="Subject" />
+                <Item dataField="Task_Status" caption="Status"/>
+
               </Item>
 
               {/* <Item itemType="group" caption="Home Address" colCount={2} colSpan={2}>
@@ -151,7 +142,7 @@ export default function Dashboard(){
 
 
         
-
+ 
            
         
 

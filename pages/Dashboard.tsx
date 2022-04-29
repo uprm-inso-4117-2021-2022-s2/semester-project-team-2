@@ -7,6 +7,10 @@ import Navigation from '../components/dashboard/Navigation'
 import DailyTasks from '../components/dashboard/DailyTasks'
 import Chart from '../components/dashboard/Chart'
 import { Task } from '../models/Task'
+import FileManager, { Permissions } from 'devextreme-react/file-manager';
+import 'devextreme/dist/css/dx.light.css';
+import { fileItems } from '../back_end/filesystem'
+import { Toolbar, Item, FileSelectionItem } from 'devextreme-react/file-manager';
 
 
 export default function Dashboard(){
@@ -49,17 +53,48 @@ export default function Dashboard(){
                 </div>
          */}
             <Header styles={styles}/>
-            <Menu />
+            <Menu styles={styles}/>
 
+            <FileManager
+            style={{background:"white"}}
+            className={styles.filesystem}
+            fileSystemProvider={fileItems}
+            
+        >
+        <Permissions
+          create={true}
+          copy={true}
+          move={true}
+          delete={true}
+          rename={true}
+          upload={true}
+          download={true}
+          
+          >
+        </Permissions>
+        <Toolbar>
 
-
+                    <Item name="showNavPane" visible={true} />
+                    <Item name="separator" />
+                    <Item name="create" />
+                   <Item name="upload" />
+                    <Item name="separator" />
+                    <Item name="switchView" visible={true}/>
+                    <FileSelectionItem name="copy" />
+                    <FileSelectionItem name="rename" />
+                    <FileSelectionItem name="download" />
+                    <FileSelectionItem name="move" />
+                    <FileSelectionItem name="delete" />
+                </Toolbar>
+      </FileManager>
 
 
 
 
             <div className={styles.boxone}>
-                <Navigation bars={bars}/>
-
+                <div style={{visibility:"hidden"}}>
+                <Navigation bars={bars} />
+                </div>
                 <div className={styles.decont}>
                     <div className={styles.decor}></div>
                 </div>
