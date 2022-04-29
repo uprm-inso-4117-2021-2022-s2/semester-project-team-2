@@ -18,7 +18,7 @@ import {
 } from 'devextreme-react/chart';
   
 import CenterTemplate from '../components/CenterTemplate';
-import {InventoryData} from "../back_end/inventorydata.js";
+import {InventoryData, InventoryData0} from "../back_end/inventorydata.js";
 
 export const data = [
     { country: 'Mammals', commodity: 'Caballos', total: InventoryData.filter(value => value.Animal === 'Caballos').length},
@@ -89,7 +89,12 @@ export const data = [
 
   // // InventoryData.map((entry:any)=> {entry.DeathDate="";})
   // console.log(JSON.stringify(InventoryData))
-  
+  // for (let i = 0; i < InventoryData.length; i++) {
+  //   InventoryData0[i].Name=InventoryData[i].Name
+  // }
+
+
+  console.log(JSON.stringify(InventoryData0))
   //const newData = {}
   const maleAgeData = [{
     state: 'Caballos',
