@@ -113,7 +113,7 @@ export default function Login() {
                             required
                             value={userData.email}
                             onChange={inputChange}
-                            error={errorSignUp}
+                            error={errorSignUp == "" ? null : errorSignUp}
                         />
                         <Form.Input
                             label="Password"
@@ -151,7 +151,7 @@ export default function Login() {
                                 required
                                 value={userData.email}
                                 onChange={inputChange}
-                                error={errorLogin}
+                                error={errorLogin == "" ? null : errorLogin}
                             />
                             <Form.Input
                                 icon="lock"
@@ -162,7 +162,7 @@ export default function Login() {
                                 required
                                 value={userData.password}
                                 onChange={inputChange}
-                                error={errorLogin}
+                                error={errorLogin == "" ? null : errorLogin}
                             />
                             <Button content="Login" primary />
                         </Form>
